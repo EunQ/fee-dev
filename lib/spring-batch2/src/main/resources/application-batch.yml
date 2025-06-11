@@ -1,0 +1,10 @@
+spring:
+  batch:
+    job:
+      enabled: false
+
+    ##해당 설정은 자동으로 안됨.
+    jdbc:
+      isolation-level-for-create: default
+      initialize-schema: NEVER
+      table-prefix: BATCH3_

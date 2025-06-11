@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: common-job
+
+  profiles.group:
+    default: db, batch
