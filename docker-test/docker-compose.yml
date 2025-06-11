@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  mysql-main:
+    image: mysql:8.0
+    container_name: mysql-main
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: main_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-main-data:/var/lib/mysql
+
+  mysql-batch:
+    image: mysql:8.0
+    container_name: mysql-batch
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: batch_db
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-batch-data:/var/lib/mysql
+
+volumes:
+  mysql-main-data:
+  mysql-batch-data:
